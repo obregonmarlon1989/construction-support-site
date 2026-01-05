@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construction Support Services</title>
+<style>
+    /* Reset & basic styling */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    header {
+        background-color: #0073b1; /* Professional blue */
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: url('construction-city.jpg') no-repeat center center/cover;
+        height: 400px;
+        padding: 0 50px;
+        color: white;
+    }
+
+    .hero-text {
+        max-width: 50%;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .hero img {
+        max-width: 35%;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    section {
+        padding: 50px;
+        text-align: center;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #0073b1;
+    }
+
+    .services {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .service-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+        margin-top: 0;
+        color: #0073b1;
+    }
+
+    .contact-form {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    .contact-form button {
+        background-color: #0073b1;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contact-form button:hover {
+        background-color: #005f8d;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    /* Page 2 style */
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .about img {
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .about-text {
+        max-width: 500px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Header & Navigation -->
+<header>
+    <h1>Pro Construction Support</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About / Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>Your Partner in Construction Management</h2>
+        <p>We provide professional Schedule & Lookahead Support, Estimating, RFIs, and Submittals management for construction projects across the US.</p>
+    </div>
+    <img src="woman-construction.jpg" alt="Professional construction manager">
+</section>
+
+<!-- Services Section -->
+<section>
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>Schedule & Lookahead Support</h3>
+            <p>Keep your projects on track with detailed scheduling and proactive planning.</p>
+        </div>
+        <div class="service-card">
+            <h3>Estimating</h3>
+            <p>Accurate cost projections to help your projects stay within budget.</p>
+        </div>
+        <div class="service-card">
+            <h3>RFIs</h3>
+            <p>Efficiently manage requests for information to reduce delays and confusion.</p>
+        </div>
+        <div class="service-card">
+            <h3>Submittals</h3>
+            <p>Organize and track all submittals to keep approvals smooth and fast.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    &copy; 2026 Pro Construction Support. All rights reserved.
+</footer>
+
+</body>
+</html>
