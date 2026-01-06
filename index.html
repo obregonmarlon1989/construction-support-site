@@ -34,7 +34,8 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 3.2rem; /* REDUCED ONE SIZE */
+    font-family: "Times New Roman", Times, serif; /* TITLE FONT */
+    font-size: 3.2rem;
     letter-spacing: 1px;
 }
 
@@ -61,7 +62,7 @@ nav a:hover {
     justify-content: space-between;
     padding: 90px 60px;
     min-height: 520px;
-    background: url("https://images.unsplash.com/photo-1509395176047-4a66953fd231") center/cover no-repeat;
+    background: url("https://images.unsplash.com/photo-1581092918056-0c4c3acd3789") center/cover no-repeat;
     color: white;
 }
 
@@ -116,7 +117,7 @@ nav a:hover {
     background: #ffa43a;
 }
 
-/* SECTION */
+/* SECTIONS */
 section {
     padding: 85px 40px;
     text-align: center;
@@ -146,6 +147,43 @@ section h2 {
 }
 
 .card h3 {
+    margin-top: 0;
+    color: var(--blue);
+}
+
+.card a {
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* ESTIMATE SAMPLES */
+.samples {
+    background: #fff;
+}
+
+.sample-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sample {
+    width: 280px;
+    padding: 28px;
+    border-radius: 16px;
+    background: var(--light);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    border-left: 6px solid var(--blue);
+    text-align: left;
+}
+
+.sample h4 {
     margin-top: 0;
     color: var(--blue);
 }
@@ -202,6 +240,7 @@ footer {
     <h1>Northpoint Build Partners</h1>
     <nav>
         <a href="#services">Services</a>
+        <a href="#samples">Estimate Samples</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -210,17 +249,16 @@ footer {
     <div class="hero-text">
         <h2>Building Smarter Projects with <span>Precision Support</span></h2>
         <p>
-            Northpoint Build Partners supports contractors with Schedule & Lookahead
-            planning, Estimating, RFIs, and Submittals—helping teams stay organized,
-            on schedule, and in control.
+            Supporting contractors with Schedule & Lookahead planning,
+            Estimating, RFIs, and Submittals — from precon through closeout.
         </p>
         <a href="#contact" class="btn">Contact Us</a>
     </div>
 
-    <!-- MAN & WOMAN READING BLUEPRINTS -->
+    <!-- MODERN CONTEMPORARY HOUSE -->
     <img
-        src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
-        alt="Man and woman reading blueprints on a construction site"
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+        alt="Modern contemporary house under construction"
     >
 </section>
 
@@ -232,8 +270,8 @@ footer {
             <p>Weekly and phase planning to keep crews aligned.</p>
         </div>
         <div class="card">
-            <h3>Estimating</h3>
-            <p>Accurate takeoffs and cost validation.</p>
+            <h3><a href="#samples">Estimating</a></h3>
+            <p>Conceptual, detailed, and GMP-style estimates.</p>
         </div>
         <div class="card">
             <h3>RFIs</h3>
@@ -242,6 +280,24 @@ footer {
         <div class="card">
             <h3>Submittals</h3>
             <p>Complete submittal coordination and approvals.</p>
+        </div>
+    </div>
+</section>
+
+<section id="samples" class="samples">
+    <h2>Estimate Samples</h2>
+    <div class="sample-grid">
+        <div class="sample">
+            <h4>Conceptual Estimate</h4>
+            <p>Early-phase budgeting based on scope assumptions and historical data.</p>
+        </div>
+        <div class="sample">
+            <h4>Detailed Trade Estimate</h4>
+            <p>CSI-divided estimate with quantities, labor, material, and equipment.</p>
+        </div>
+        <div class="sample">
+            <h4>GMP / Cost Validation</h4>
+            <p>Owner-focused cost review for GMP and negotiated contracts.</p>
         </div>
     </div>
 </section>
