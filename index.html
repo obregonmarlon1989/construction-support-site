@@ -9,7 +9,7 @@
 :root {
     --blue: #1f4fd8;
     --orange: #f7931e;
-    --dark: #222;
+    --dark: #1e1e1e;
     --light: #f5f7fb;
 }
 
@@ -28,13 +28,23 @@ body {
 header {
     background: linear-gradient(90deg, var(--blue), #2c6cff);
     color: white;
-    padding: 22px;
+    padding: 30px 20px;
     text-align: center;
+}
+
+header h1 {
+    font-size: 3.4rem; /* COMPANY NAME BIGGER */
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 12px;
 }
 
 nav a {
     color: white;
-    margin: 0 18px;
+    margin: 0 20px;
     text-decoration: none;
     font-weight: 600;
 }
@@ -49,8 +59,8 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 70px;
-    min-height: 440px;
+    padding: 80px;
+    min-height: 480px;
     background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover no-repeat;
     color: white;
 }
@@ -59,7 +69,7 @@ nav a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-text {
@@ -68,8 +78,8 @@ nav a:hover {
     z-index: 2;
 }
 
-.hero-text h1 {
-    font-size: 3rem;
+.hero-text h2 {
+    font-size: 2.8rem;
     margin-bottom: 15px;
 }
 
@@ -78,24 +88,24 @@ nav a:hover {
 }
 
 .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     line-height: 1.6;
 }
 
+/* ILLUSTRATION IMAGE */
 .hero img {
-    width: 320px;
-    border-radius: 14px;
+    width: 360px;
+    border-radius: 18px;
     position: relative;
     z-index: 2;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
-    filter: brightness(1.05) contrast(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.55);
 }
 
 /* BUTTON */
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 14px 26px;
+    margin-top: 28px;
+    padding: 15px 30px;
     background: var(--orange);
     color: white;
     text-decoration: none;
@@ -109,119 +119,9 @@ nav a:hover {
 
 /* SECTIONS */
 section {
-    padding: 70px 40px;
+    padding: 80px 40px;
     text-align: center;
 }
 
 section h2 {
-    color: var(--blue);
-    margin-bottom: 45px;
-    font-size: 2.2rem;
-}
-
-/* SERVICES */
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: white;
-    padding: 28px;
-    width: 270px;
-    border-radius: 14px;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.1);
-    border-top: 5px solid var(--orange);
-}
-
-.card h3 {
-    color: var(--blue);
-    margin-bottom: 10px;
-}
-
-/* FOOTER */
-footer {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 22px;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 50px 25px;
-    }
-
-    .hero-text {
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .hero img {
-        width: 260px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h2>Northpoint Build Partners</h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div class="hero-text">
-        <h1>Building Smarter Projects with <span>Precision Support</span></h1>
-        <p>
-            Northpoint Build Partners provides Schedule & Lookahead Support,
-            Estimating, RFIs, and Submittals—helping contractors stay on schedule,
-            control costs, and reduce risk.
-        </p>
-        <a href="#services" class="btn">Request a Consultation</a>
-    </div>
-
-    <!-- MAN + WOMAN REVIEWING BLUEPRINTS -->
-    <img
-        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-        alt="Construction professionals reviewing blueprints"
-    />
-</section>
-
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">
-            <h3>Schedule & Lookahead</h3>
-            <p>Detailed CPM and weekly lookaheads to keep crews aligned.</p>
-        </div>
-        <div class="card">
-            <h3>Estimating</h3>
-            <p>Trade-level estimates and budget validation for smarter bids.</p>
-        </div>
-        <div class="card">
-            <h3>RFIs</h3>
-            <p>Clear, organized RFI tracking to eliminate confusion and delays.</p>
-        </div>
-        <div class="card">
-            <h3>Submittals</h3>
-            <p>Complete submittal coordination from kickoff through approval.</p>
-        </div>
-    </div>
-</section>
-
-<footer>
-    © 2026 Northpoint Build Partners. All rights reserved.
-</footer>
-
-</body>
-</html>
+    color:
