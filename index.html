@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Northpoint Build Partners</title>
 
 <style>
 :root {
     --blue: #1f4fd8;
     --orange: #f7931e;
-    --dark: #1e1e1e;
-    --light: #f5f7fb;
+    --dark: #1f1f1f;
+    --light: #f4f6fb;
 }
 
 * {
@@ -19,22 +19,22 @@
 
 body {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: var(--light);
     color: #333;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(90deg, var(--blue), #2c6cff);
+    background: linear-gradient(90deg, var(--blue), #2d6cff);
     color: white;
-    padding: 30px 20px;
+    padding: 32px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 3.4rem; /* COMPANY NAME BIGGER */
     margin: 0;
+    font-size: 3.6rem; /* COMPANY NAME BIG */
     letter-spacing: 1px;
 }
 
@@ -44,7 +44,7 @@ nav {
 
 nav a {
     color: white;
-    margin: 0 20px;
+    margin: 0 18px;
     text-decoration: none;
     font-weight: 600;
 }
@@ -59,7 +59,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px;
+    padding: 80px 60px;
     min-height: 480px;
     background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover no-repeat;
     color: white;
@@ -69,7 +69,7 @@ nav a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0,0,0,0.6);
 }
 
 .hero-text {
@@ -79,8 +79,8 @@ nav a:hover {
 }
 
 .hero-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
+    font-size: 2.6rem;
+    margin-bottom: 16px;
 }
 
 .hero-text span {
@@ -92,20 +92,19 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* ILLUSTRATION IMAGE */
 .hero img {
-    width: 360px;
-    border-radius: 18px;
+    width: 340px;
+    border-radius: 14px;
     position: relative;
     z-index: 2;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.55);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.5);
 }
 
 /* BUTTON */
 .btn {
     display: inline-block;
-    margin-top: 28px;
-    padding: 15px 30px;
+    margin-top: 26px;
+    padding: 14px 28px;
     background: var(--orange);
     color: white;
     text-decoration: none;
@@ -114,14 +113,148 @@ nav a:hover {
 }
 
 .btn:hover {
-    background: #ff9f2f;
+    background: #ffa43a;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
     padding: 80px 40px;
     text-align: center;
 }
 
 section h2 {
-    color:
+    font-size: 2.4rem;
+    color: var(--blue);
+    margin-bottom: 50px;
+}
+
+/* SERVICES */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    border-top: 6px solid var(--orange);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--blue);
+}
+
+/* CONTACT */
+.contact {
+    background: white;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin: 12px 0;
+}
+
+.contact strong {
+    color: var(--blue);
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 24px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 25px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .hero img {
+        width: 260px;
+    }
+
+    header h1 {
+        font-size: 2.6rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Northpoint Build Partners</h1>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Building Smarter Projects with <span>Precision Support</span></h2>
+        <p>
+            Northpoint Build Partners supports contractors with Schedule & Lookahead
+            planning, Estimating, RFIs, and Submittals — helping teams stay organized,
+            on schedule, and in control.
+        </p>
+        <a href="#contact" class="btn">Contact Us</a>
+    </div>
+
+    <!-- MAN + WOMAN REVIEWING BLUEPRINTS -->
+    <img
+        src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
+        alt="Man and woman in hard hats reviewing blueprints"
+    >
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Schedule & Lookahead</h3>
+            <p>Weekly and phase planning to keep crews aligned and productive.</p>
+        </div>
+        <div class="card">
+            <h3>Estimating</h3>
+            <p>Accurate quantity takeoffs and budget support.</p>
+        </div>
+        <div class="card">
+            <h3>RFIs</h3>
+            <p>Clear, organized RFI tracking to reduce delays.</p>
+        </div>
+        <div class="card">
+            <h3>Submittals</h3>
+            <p>End-to-end submittal coordination and approvals.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Information</h2>
+    <p><strong>Marlon Obregon</strong></p>
+    <p>📞 (385) 299-8209</p>
+</section>
+
+<footer>
+    © 2026 Northpoint Build Partners. All rights reserved.
+</footer>
+
+</body>
+</html>
