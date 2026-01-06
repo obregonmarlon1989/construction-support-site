@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Construction Support Services</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Northpoint Build Partners</title>
+
 <style>
-    /* Reset & basic styling */
-    body, html {
-        margin: 0;
-        padding: 0;
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-    }
+:root {
+    --blue: #1f4fd8;
+    --orange: #f7931e;
+    --dark: #222;
+    --light: #f5f7fb;
+}
 
-    header {
-        background-color: #0073b1; /* Professional blue */
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 2rem;
-    }
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--light);
+    color: #333;
+}
 
-    nav {
-        margin-top: 10px;
-    }
+/* HEADER */
+header {
+    background: linear-gradient(90deg, var(--blue), #2c6cff);
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-    }
+nav a {
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-    nav a:hover {
-        text-decoration: underline;
-    }
+nav a:hover {
+    text-decoration: underline;
+}
 
-  .hero {
+/* HERO */
+.hero {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: url('construction-city.jpg') no-repeat center center/cover;
-    height: 400px;
-    padding: 0 50px;
+    padding: 70px;
+    min-height: 440px;
+    background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover no-repeat;
     color: white;
 }
 
@@ -59,179 +59,168 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55); /* dark overlay */
+    background: rgba(0, 0, 0, 0.55);
 }
 
-.hero-text,
-.hero img {
+.hero-text {
+    max-width: 55%;
     position: relative;
     z-index: 2;
 }
 
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-text span {
+    color: var(--orange);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero img {
+    width: 320px;
+    border-radius: 14px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    filter: brightness(1.05) contrast(1.05);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 26px;
+    background: var(--orange);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background: #ff9f2f;
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+section h2 {
+    color: var(--blue);
+    margin-bottom: 45px;
+    font-size: 2.2rem;
+}
+
+/* SERVICES */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    width: 270px;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--orange);
+}
+
+.card h3 {
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 25px;
+    }
+
     .hero-text {
-        max-width: 50%;
-    }
-
-    .hero-text h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-
-    .hero-text p {
-        font-size: 1.2rem;
-        line-height: 1.5;
+        max-width: 100%;
+        margin-bottom: 30px;
     }
 
     .hero img {
-        max-width: 35%;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        width: 260px;
     }
-
-    section {
-        padding: 50px;
-        text-align: center;
-    }
-
-    section h2 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-        color: #0073b1;
-    }
-
-    .services {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .service-card {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        width: 250px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        transition: transform 0.3s;
-    }
-
-    .service-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .service-card h3 {
-        margin-top: 0;
-        color: #0073b1;
-    }
-
-    .contact-form {
-        max-width: 500px;
-        margin: 0 auto;
-        text-align: left;
-    }
-
-    .contact-form label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    .contact-form input, .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 1rem;
-    }
-
-    .contact-form button {
-        background-color: #0073b1;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        font-size: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .contact-form button:hover {
-        background-color: #005f8d;
-    }
-
-    footer {
-        background-color: #333;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    /* Page 2 style */
-    .about {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        flex-wrap: wrap;
-    }
-
-    .about img {
-        width: 300px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    .about-text {
-        max-width: 500px;
-    }
+}
 </style>
 </head>
+
 <body>
 
-<!-- Header & Navigation -->
 <header>
-    <h1>Pro Construction Support</h1>
+    <h2>Northpoint Build Partners</h2>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About / Contact</a>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
     </nav>
 </header>
 
-<!-- Hero Section -->
 <section class="hero">
     <div class="hero-text">
-        <h2>Your Partner in Construction Management</h2>
-        <p>We provide professional Schedule & Lookahead Support, Estimating, RFIs, and Submittals management for construction projects across the US.</p>
+        <h1>Building Smarter Projects with <span>Precision Support</span></h1>
+        <p>
+            Northpoint Build Partners provides Schedule & Lookahead Support,
+            Estimating, RFIs, and Submittals—helping contractors stay on schedule,
+            control costs, and reduce risk.
+        </p>
+        <a href="#services" class="btn">Request a Consultation</a>
     </div>
-    <img src="woman-construction.jpg" alt="Professional construction manager">
+
+    <!-- MAN + WOMAN REVIEWING BLUEPRINTS -->
+    <img
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+        alt="Construction professionals reviewing blueprints"
+    />
 </section>
 
-<!-- Services Section -->
-<section>
+<section id="services">
     <h2>Our Services</h2>
     <div class="services">
-        <div class="service-card">
-            <h3>Schedule & Lookahead Support</h3>
-            <p>Keep your projects on track with detailed scheduling and proactive planning.</p>
+        <div class="card">
+            <h3>Schedule & Lookahead</h3>
+            <p>Detailed CPM and weekly lookaheads to keep crews aligned.</p>
         </div>
-        <div class="service-card">
+        <div class="card">
             <h3>Estimating</h3>
-            <p>Accurate cost projections to help your projects stay within budget.</p>
+            <p>Trade-level estimates and budget validation for smarter bids.</p>
         </div>
-        <div class="service-card">
+        <div class="card">
             <h3>RFIs</h3>
-            <p>Efficiently manage requests for information to reduce delays and confusion.</p>
+            <p>Clear, organized RFI tracking to eliminate confusion and delays.</p>
         </div>
-        <div class="service-card">
+        <div class="card">
             <h3>Submittals</h3>
-            <p>Organize and track all submittals to keep approvals smooth and fast.</p>
+            <p>Complete submittal coordination from kickoff through approval.</p>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
-    &copy; 2026 Pro Construction Support. All rights reserved.
+    © 2026 Northpoint Build Partners. All rights reserved.
 </footer>
 
 </body>
