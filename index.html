@@ -34,7 +34,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-family: "Times New Roman", Times, serif; /* TITLE FONT */
+    font-family: "Times New Roman", Times, serif; 
     font-size: 3.2rem;
     letter-spacing: 1px;
 }
@@ -70,7 +70,7 @@ nav a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.55);
 }
 
 .hero-text {
@@ -188,6 +188,34 @@ section h2 {
     color: var(--blue);
 }
 
+/* TESTIMONIALS */
+.testimonials {
+    background: white;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    width: 280px;
+    background: var(--light);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    font-style: italic;
+}
+
+.testimonial h4 {
+    margin-top: 12px;
+    color: var(--blue);
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* CONTACT */
 .contact {
     background: white;
@@ -241,6 +269,7 @@ footer {
     <nav>
         <a href="#services">Services</a>
         <a href="#samples">Estimate Samples</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -254,11 +283,9 @@ footer {
         </p>
         <a href="#contact" class="btn">Contact Us</a>
     </div>
-
-    <!-- MODERN CONTEMPORARY HOUSE -->
     <img
-        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-        alt="Modern contemporary house under construction"
+        src="https://images.unsplash.com/photo-1601582587480-95517c476409"
+        alt="Construction professionals reviewing plans"
     >
 </section>
 
@@ -302,6 +329,24 @@ footer {
     </div>
 </section>
 
+<section id="testimonials" class="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            <p>"Northpoint Build Partners made our project seamless. Highly professional and reliable!"</p>
+            <h4>- Alex Johnson, Project Manager</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Their estimating and scheduling support saved us weeks of time."</p>
+            <h4>- Lisa Perez, General Contractor</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Excellent communication and attention to detail throughout our project."</p>
+            <h4>- Mark Thompson, Developer</h4>
+        </div>
+    </div>
+</section>
+
 <section id="contact" class="contact">
     <h2>Contact Information</h2>
     <p><strong>Marlon Obregon</strong></p>
@@ -309,7 +354,7 @@ footer {
 </section>
 
 <footer>
-    © 2026 Northpoint Build Partners. All rights reserved.
+    &copy; 2026 Northpoint Build Partners. All rights reserved.
 </footer>
 
 </body>
