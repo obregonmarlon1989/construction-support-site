@@ -56,27 +56,17 @@ nav a:hover {
 
 /* HERO */
 .hero {
-    position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    padding: 90px 60px;
-    min-height: 520px;
-    background: url("https://images.unsplash.com/photo-1598225247883-62ff7d89a848?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
-    color: white;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
+    justify-content: center;
+    padding: 90px 40px;
+    background: var(--light);
 }
 
 .hero-text {
-    max-width: 55%;
-    position: relative;
-    z-index: 2;
+    max-width: 600px;
+    margin: 20px;
 }
 
 .hero-text h2 {
@@ -93,6 +83,15 @@ nav a:hover {
     line-height: 1.6;
 }
 
+.hero-img {
+    max-width: 550px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.55);
+    margin: 20px;
+}
+
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 28px;
@@ -270,6 +269,7 @@ footer {
         </p>
         <a href="#contact" class="btn">Contact Us</a>
     </div>
+    <img class="hero-img" src="https://images.unsplash.com/photo-1598225247883-62ff7d89a848?auto=format&fit=crop&w=1400&q=80" alt="Two construction professionals reviewing blueprints, man and woman in hard hats">
 </section>
 
 <section id="services">
