@@ -1,343 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Northpoint Build Partners</title>
+    <meta charset="UTF-8">
+    <title>Northpoint Build Partners</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root {
-    --blue: #1f4fd8;
-    --orange: #f7931e;
-    --dark: #1f1f1f;
-    --light: #f4f6fb;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+        }
 
-* {
-    box-sizing: border-box;
-}
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--light);
-    color: #333;
-}
+        header h1 {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
 
-/* HEADER */
-header {
-    background: linear-gradient(90deg, var(--blue), #2d6cff);
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-}
+        header p {
+            font-size: 18px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-header h1 {
-    margin: 0;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 3.2rem;
-    letter-spacing: 1px;
-}
+        nav {
+            background-color: #0f172a;
+            padding: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-nav {
-    margin-top: 12px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
 
-nav a {
-    color: white;
-    margin: 0 18px;
-    text-decoration: none;
-    font-weight: 600;
-}
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-nav a:hover {
-    text-decoration: underline;
-}
+        section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
 
-/* HERO */
-.hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 90px 40px;
-    background: var(--light);
-}
+        h2 {
+            color: #1e3a8a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+        }
 
-.hero-text {
-    max-width: 600px;
-    margin: 20px;
-}
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
 
-.hero-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 18px;
-}
+        .box {
+            background: white;
+            padding: 25px;
+            border-left: 6px solid #2563eb;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
 
-.hero-text span {
-    color: var(--orange);
-}
+        .box h3 {
+            margin-top: 0;
+            color: #0f172a;
+        }
 
-.hero-text p {
-    font-size: 1.25rem;
-    line-height: 1.6;
-}
+        .contact {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
 
-.hero-img {
-    max-width: 550px;
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.55);
-    margin: 20px;
-}
+        .contact h2 {
+            color: white;
+            border: none;
+        }
 
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 28px;
-    padding: 15px 32px;
-    background: var(--orange);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-}
-
-.btn:hover {
-    background: #ffa43a;
-}
-
-/* SECTIONS */
-section {
-    padding: 85px 40px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2.4rem;
-    color: var(--blue);
-    margin-bottom: 50px;
-}
-
-/* SERVICES */
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: white;
-    padding: 32px;
-    width: 280px;
-    border-radius: 16px;
-    box-shadow: 0 10px 26px rgba(0,0,0,0.12);
-    border-top: 6px solid var(--orange);
-}
-
-.card h3 {
-    margin-top: 0;
-    color: var(--blue);
-}
-
-.card a {
-    color: var(--blue);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.card a:hover {
-    text-decoration: underline;
-}
-
-/* ESTIMATE SAMPLES */
-.samples {
-    background: #fff;
-}
-
-.sample-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.sample {
-    width: 280px;
-    padding: 28px;
-    border-radius: 16px;
-    background: var(--light);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-    border-left: 6px solid var(--blue);
-    text-align: left;
-}
-
-.sample h4 {
-    margin-top: 0;
-    color: var(--blue);
-}
-
-/* TESTIMONIALS */
-.testimonials {
-    background: white;
-}
-
-.testimonial-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.testimonial {
-    width: 280px;
-    background: var(--light);
-    padding: 24px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    font-style: italic;
-}
-
-.testimonial h4 {
-    margin-top: 12px;
-    color: var(--blue);
-    font-weight: bold;
-    font-style: normal;
-}
-
-/* CONTACT */
-.contact {
-    background: white;
-}
-
-.contact p {
-    font-size: 1.2rem;
-    margin: 12px 0;
-}
-
-.contact strong {
-    color: var(--blue);
-}
-
-/* FOOTER */
-footer {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 24px;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 65px 25px;
-    }
-
-    .hero-text {
-        max-width: 100%;
-        margin-bottom: 40px;
-    }
-
-    header h1 {
-        font-size: 2.4rem;
-    }
-}
-</style>
+        footer {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
     <h1>Northpoint Build Partners</h1>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#samples">Estimate Samples</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <p>Professional Preconstruction & Project Support Services for General Contractors and Owners</p>
 </header>
 
-<section class="hero">
-    <div class="hero-text">
-        <h2>Building Smarter Projects with <span>Precision Support</span></h2>
-        <p>
-            Supporting contractors with Schedule & Lookahead planning,
-            Estimating, RFIs, and Submittals — from precon through closeout.
-        </p>
-        <a href="#contact" class="btn">Contact Us</a>
-    </div>
-    <img class="hero-img" src="https://images.unsplash.com/photo-1598225247883-62ff7d89a848?auto=format&fit=crop&w=1400&q=80" alt="Two construction professionals reviewing blueprints, man and woman in hard hats">
-</section>
+<nav>
+    <a href="#services">Services</a>
+    <a href="#samples">Estimate Samples</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <section id="services">
     <h2>Our Services</h2>
+
     <div class="services">
-        <div class="card">
-            <h3>Schedule & Lookahead</h3>
-            <p>Weekly and phase planning to keep crews aligned.</p>
+        <div class="box">
+            <h3>Schedule & Lookahead Support</h3>
+            <p>Detailed project scheduling and lookahead planning to support field operations and maintain workflow.</p>
         </div>
-        <div class="card">
-            <h3><a href="#samples">Estimating</a></h3>
-            <p>Conceptual, detailed, and GMP-style estimates.</p>
+
+        <div class="box">
+            <h3>Estimating</h3>
+            <p>Conceptual through detailed estimates, quantity takeoffs, and cost validation support.</p>
         </div>
-        <div class="card">
-            <h3>RFIs</h3>
-            <p>Clear RFI tracking to reduce delays and rework.</p>
+
+        <div class="box">
+            <h3>RFI Management</h3>
+            <p>Preparation, tracking, and coordination of RFIs to ensure timely responses and clarity.</p>
         </div>
-        <div class="card">
+
+        <div class="box">
             <h3>Submittals</h3>
-            <p>Complete submittal coordination and approvals.</p>
+            <p>Submittal preparation, tracking, and coordination to keep approvals moving efficiently.</p>
         </div>
     </div>
 </section>
 
-<section id="samples" class="samples">
+<section id="samples">
     <h2>Estimate Samples</h2>
-    <div class="sample-grid">
-        <div class="sample">
-            <h4>Conceptual Estimate</h4>
-            <p>Early-phase budgeting based on scope assumptions and historical data.</p>
-        </div>
-        <div class="sample">
-            <h4>Detailed Trade Estimate</h4>
-            <p>CSI-divided estimate with quantities, labor, material, and equipment.</p>
-        </div>
-        <div class="sample">
-            <h4>GMP / Cost Validation</h4>
-            <p>Owner-focused cost review for GMP and negotiated contracts.</p>
-        </div>
-    </div>
-</section>
 
-<section id="testimonials" class="testimonials">
-    <h2>Client Testimonials</h2>
-    <div class="testimonial-grid">
-        <div class="testimonial">
-            <p>"Northpoint Build Partners made our project seamless. Highly professional and reliable!"</p>
-            <h4>- Alex Johnson, Project Manager</h4>
-        </div>
-        <div class="testimonial">
-            <p>"Their estimating and scheduling support saved us weeks of time."</p>
-            <h4>- Lisa Perez, General Contractor</h4>
-        </div>
-        <div class="testimonial">
-            <p>"Excellent communication and attention to detail throughout our project."</p>
-            <h4>- Mark Thompson, Developer</h4>
-        </div>
+    <div class="box">
+        <h3>Conceptual Estimate</h3>
+        <p>High-level budgeting based on early design information, historical data, and unit pricing.</p>
+    </div>
+
+    <div class="box">
+        <h3>Schematic Design Estimate</h3>
+        <p>Refined estimates aligned with schematic drawings and preliminary scope definitions.</p>
+    </div>
+
+    <div class="box">
+        <h3>Detailed Quantity Takeoff</h3>
+        <p>Trade-level quantity takeoffs with material, labor, and equipment breakdowns.</p>
+    </div>
+
+    <div class="box">
+        <h3>Cost Comparison & Value Engineering</h3>
+        <p>Alternate pricing, scope comparisons, and value engineering options to support decision-making.</p>
     </div>
 </section>
 
 <section id="contact" class="contact">
-    <h2>Contact Information</h2>
-    <p><strong>Marlon Obregon</strong></p>
-    <p>📞 (385) 299-8209</p>
+    <h2>Contact</h2>
+    <p>
+        <strong>Marlon Obregon</strong><br>
+        Northpoint Build Partners<br><br>
+        📞 (385) 299-8209
+    </p>
 </section>
 
 <footer>
-    &copy; 2026 Northpoint Build Partners. All rights reserved.
+    © 2026 Northpoint Build Partners | Preconstruction & Project Support
 </footer>
 
 </body>
